@@ -65,7 +65,18 @@ defmodule Oplace.MixProject do
       {:gettext, "~> 1.0"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+
+
+
+
+      {:floki, ">= 0.30.0", only: :test},
+      {:finch, "~> 0.13"},
+      {:plug_cowboy, "~> 2.5"},
+      {:absinthe, "~> 1.7"},
+      {:absinthe_plug, "~> 1.5"},
+      {:absinthe_phoenix, "~> 2.0"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
