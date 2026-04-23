@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -32,5 +32,48 @@
   </head>
   <body>
     {@inner_content}
+  </body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="fr" class="bg-[#0A0E1A]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <title>OPLACE - Services de confiance</title>
+    <link rel="preconnect" href__="https://fonts.googleapis.com" />
+    <link href__="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link phx-track-static rel="stylesheet" href__={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}></script>
+  </head>
+  <body class="font-outfit bg-[#0A0E1A] text-white">
+    <!-- Navbar -->
+    <nav class="border-b border-[#1E2A3B] px-6 py-4">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href__="/" class="text-xl font-bold text-white">OPLACE</a>
+        <div class="hidden md:flex gap-8 text-sm text-gray-400">
+          <a href__="/services" class="hover:text-white transition">Services</a>
+          <a href__="/jobs" class="hover:text-white transition">Emplois</a>
+          <a href__="/blog" class="hover:text-white transition">Blog</a>
+          <a href__="/about" class="hover:text-white transition">À propos</a>
+        </div>
+        <a href__="/jobs" class="bg-[#3B82F6] text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700 transition">
+          Postuler
+        </a>
+      </div>
+    </nav>
+
+    <%= @inner_content %>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1E2A3B] px-6 py-12 mt-20">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <p class="font-bold text-white">OPLACE</p>
+        <p class="text-gray-500 text-sm">© 2024 OPLACE. Tous droits réservés.</p>
+      </div>
+    </footer>
   </body>
 </html>
